@@ -1,0 +1,27 @@
+
+<div class="card-body">
+  	<div class="breadcrumb">
+  		<span class="rotulo">Webs</span>
+	</div>  
+  	<div class="breadcrumb secondary-bread">
+  		<span class="rotulo-second">PORTFOLIO<span style="color: brown;">WEBS</span></span>
+  		<div class="container-buttons">
+	  		<button type="button" class="btn btn-primary btn-sm" id="all-webs" (click)="buttonManagement($event);">TODAS</button>
+			<button type="button" class="btn btn-secondary btn-sm" id="php-webs" (click)="buttonManagement($event);">PHP-MySQL</button>
+			<button type="button" class="btn btn-secondary btn-sm" id="angular-webs" (click)="buttonManagement($event);">ANGULAR</button>
+		</div>
+	</div>  
+	<div class="container-info-text">
+		Aquí puedes ver algunas de las webs que he realizado al margen de mi actividad profesional.
+	</div>			
+	<div *ngIf="posts$ | async as posts" class="container-webs">
+		<div  class="web-box {{post.tagsPost}}" *ngFor="let post of posts">
+			<a [routerLink]="['/post', post.id]" class="link-to-project">VER PROYECTO</a>
+ 			<img src="{{post.imagePost}}" alt="{{post.titlePost}}" class="top" style="border-radius: 8px;"> 	
+ 			<div class="bottom">
+ 				<div class="rotulo-box-web">VER PROYECTO</div>
+ 				<div class="info-box-web">{{post.infoPost}}</div>
+ 			</div>	
+		</div>
+	</div>
+</div>

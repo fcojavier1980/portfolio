@@ -1,0 +1,32 @@
+.card{
+	border: 1px solid white;
+	padding-top: 50px;
+	background-color: brown;
+
+}
+
+.card-header{
+	background-color: brown;
+}
+
+.nav-link{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.nav-item:hover {
+	background-color: #ac3f3f;
+
+}
+
+.nav-item > a{
+	color: #d26b6b;
+}
+
+.nav-tabs .nav-link:hover{
+	border-top: 1px solid brown;
+	border-left: 1px solid brown;
+	border-right: 1px solid brown;
+	border-bottom: 1px solid transparent;
+	color: #f0b4b4;
+}
