@@ -32,15 +32,23 @@ export class HomeComponent implements OnInit {
   		$(elemento).addClass('btn-primary');
   		if(elemento.id == 'php-webs'){
   			$('.angular').css('opacity', '0.2');
+        $('.api_rest').css('opacity', '0.2');
   			$('.php').css('opacity', '1');
   		}
   		if(elemento.id == 'angular-webs'){
   			$('.php').css('opacity', '0.2');
+        $('.api_rest').css('opacity', '0.2');
   			$('.angular').css('opacity', '1');
   		}  
+        if(elemento.id == 'api-rest'){
+        $('.php').css('opacity', '0.2');
+        $('.angular').css('opacity', '0.2');        
+        $('.api_rest').css('opacity', '1');
+      }      
   		if(elemento.id == 'all-webs'){
   			$('.php').css('opacity', '1');
   			$('.angular').css('opacity', '1');
+        $('.api_rest').css('opacity', '1');
   		}    				
   	}
 

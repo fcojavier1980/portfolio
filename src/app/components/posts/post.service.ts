@@ -16,7 +16,7 @@ export class PostService {
   constructor(
     private afs: AngularFirestore,
     private storage: AngularFireStorage) {
-    this.postsCollection = afs.collection<PostI>('posts', ref => ref.orderBy('tagsPost', 'desc'));
+    this.postsCollection = afs.collection<PostI>('posts', ref => ref.orderBy('titlePost', 'desc'));
 }
 
 
