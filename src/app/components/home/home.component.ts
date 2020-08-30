@@ -13,36 +13,44 @@ declare var $:any;
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-	public posts$: Observable<PostI[]>;
-  	constructor(private postSvc: PostService) { }
+  public posts$: Observable<PostI[]>;
+    constructor(private postSvc: PostService) { }
 
-  	ngOnInit(): void {
-  		this.posts$ = this.postSvc.getAllPosts();
-  	}
+    ngOnInit(): void {
+      this.posts$ = this.postSvc.getAllPosts();
+    }
 
-  	buttonManagement(elem){
-  		
-  		$( ".btn" ).each(function() {
-  			$(this).removeClass('btn-primary');
-  			$(this).addClass('btn-secondary');
-		});
-  		var elemento = elem.srcElement;
-  		console.log(elemento);
-  		$(elemento).removeClass('btn-secondary');
-  		$(elemento).addClass('btn-primary');
-  		if(elemento.id == 'php-webs'){
-  			$('.angular').css('opacity', '0.2');
-  			$('.php').css('opacity', '1');
-  		}
-  		if(elemento.id == 'angular-webs'){
-  			$('.php').css('opacity', '0.2');
-  			$('.angular').css('opacity', '1');
-  		}  
-  		if(elemento.id == 'all-webs'){
-  			$('.php').css('opacity', '1');
-  			$('.angular').css('opacity', '1');
-  		}    				
-  	}
+    buttonManagement(elem){
+      
+      $( ".btn" ).each(function() {
+        $(this).removeClass('btn-primary');
+        $(this).addClass('btn-secondary');
+    });
+      var elemento = elem.srcElement;
+      console.log(elemento);
+      $(elemento).removeClass('btn-secondary');
+      $(elemento).addClass('btn-primary');
+      if(elemento.id == 'php-webs'){
+        $('.angular').css('opacity', '0.2');
+        $('.api_rest').css('opacity', '0.2');
+        $('.php').css('opacity', '1');
+      }
+      if(elemento.id == 'angular-webs'){
+        $('.php').css('opacity', '0.2');
+        $('.api_rest').css('opacity', '0.2');
+        $('.angular').css('opacity', '1');
+      }  
+        if(elemento.id == 'api-rest'){
+        $('.php').css('opacity', '0.2');
+        $('.angular').css('opacity', '0.2');        
+        $('.api_rest').css('opacity', '1');
+      }      
+      if(elemento.id == 'all-webs'){
+        $('.php').css('opacity', '1');
+        $('.angular').css('opacity', '1');
+        $('.api_rest').css('opacity', '1');
+      }            
+    }
 
     webManagementHover(elem){
     var elemento = elem.srcElement;
