@@ -6,8 +6,8 @@
   	<div class="breadcrumb secondary-bread">
   		<span class="rotulo-second">PORTFOLIO<span style="color: brown;">SERVICIOS</span></span>
 	</div>  
-	<div class="container-info-text-about">
-	Me dedico principalmente al desarrollo web. He desarrollado tanto webs clásicas (PHP MySQL), como reactivas (Single Page Aplication) y API REST (Web services). He trabajado con los frameworks Symfony 3, Laravel, Zend y Angular. Y los sistemas de control de versiones Git y Subversion.<br>
+	<div class="container-info-text-about" *ngIf="vardatos$ | async as vardatos">
+	{{vardatos[0].serviciosVar}}<br>
 
 
 	</div>			

@@ -12,6 +12,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule , BUCKET } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
 import { PostComponent } from './components/posts/post/post.component';
+import { VardatoComponent } from './components/vardatos/vardato/vardato.component';
 
 /* --------- */
 
@@ -21,7 +22,8 @@ import { PostComponent } from './components/posts/post/post.component';
     AppComponent,
     ToolbarComponent,
     FooterComponent,
-    PostComponent
+    PostComponent,
+    VardatoComponent
   ],
   imports: [
     BrowserModule,

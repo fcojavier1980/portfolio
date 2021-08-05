@@ -6,8 +6,8 @@
   		<span class="rotulo-second">PORTFOLIO<span style="color: brown;">CONTACTO</span></span>
 	</div>  
 	<div class="container-info-text">
-		<span style="font-weight: bold;">TELÉFONO:</span> 600541934
+		<span style="font-weight: bold;">TELÉFONO: </span> <span *ngIf="vardatos$ | async as vardatos">{{vardatos[0].telefonoVar}}</span>
 		<br><br>
-		<span style="font-weight: bold;">EMAIL:</span> fjgpguadalupe4@hotmail.com
+		<span style="font-weight: bold;">EMAIL: </span> <span *ngIf="vardatos$ | async as vardatos">{{vardatos[0].emailVar}}</span>
 	</div>			
 </div>

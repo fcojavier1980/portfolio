@@ -5,14 +5,15 @@
   	<div class="breadcrumb secondary-bread">
   		<span class="rotulo-second">PORTFOLIO<span style="color: brown;">SOBRE MÍ</span></span>
   		<div style="float: right; width: 100%; margin-top: 30px;">
-  			<img src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/109819532_2160054400805391_6660187799382358792_n.jpg?_nc_cat=110&_nc_sid=8024bb&_nc_ohc=IpKYhq_82wQAX-lSLE-&_nc_ht=scontent-mad1-1.xx&oh=5a1e7f625141f41f59d1b42e72b0bce9&oe=5F454328" alt="foto-personal" style="height: 150px; width: 150px; border-radius: 8px;"> 
+  			<img src="assets/images/foto-personal.jpg" alt="foto-personal" style="height: 150px; width: 150px; border-radius: 8px;"> 
   		</div>
 	</div>  
-	<div class="container-info-text-about">
-Hola.<br>
-Empecé mis estudios de FP2 en desarrollo de aplicaciones web en 2014. Los acabé en 2016.<br> Posteriormente hice las prácticas laborales y en Junio del 2017 empecé a trabajar profesionalmente para GlobalHoldings hasta Febrero del 2020. <br>
-Mi labor en esta empresa ha estado orientada básicamente a la parte del frontend. Trabajaba con Javascript, Jquery, Html5, CSS3 y PHP. También me interesa la parte del backend de la cual me he ocupado en diversos proyectos.<br>
- En Febrero del 2020 terminé mi relación laboral con esta empresa y durante este tiempo me he dedicado a seguir formándome. Sobretodo me he enfocado en ampliar mis conocimientos de desarrollo de webs reactivas.
-
+	<div class="container-info-text-about" *ngIf="vardatos$ | async as vardatos">
+    {{vardatos[0].aboutVar}}<br>
+    {{vardatos[0].aboutVar2}}<br>
+    {{vardatos[0].aboutVar3}}<br>
+    {{vardatos[0].aboutVar4}}<br>
+    {{vardatos[0].aboutVar5}}<br>
+    {{vardatos[0].aboutVar6}}<br>
 	</div>			
 </div>

@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
 
   	ngOnInit(): void {
   		this.posts$ = this.postSvc.getAllPosts();
+
   	}
 
   	buttonManagement(elem){
@@ -27,7 +28,6 @@ export class HomeComponent implements OnInit {
   			$(this).addClass('btn-secondary');
 		});
   		var elemento = elem.srcElement;
-  		console.log(elemento);
   		$(elemento).removeClass('btn-secondary');
   		$(elemento).addClass('btn-primary');
   		if(elemento.id == 'php-webs'){
